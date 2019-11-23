@@ -72,5 +72,10 @@ namespace DatingApp.API.Data
 
             return false;
         }
+
+        public Task Getusers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
