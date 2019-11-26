@@ -15,12 +15,11 @@ using System.Collections.Generic;
 using System.Linq;
 using CloudinaryDotNet.Actions;
 
-
-
 namespace DatingApp.API.Controllers
 {
 
-    [Route("api/[users/{userId}/photos]")]
+    [Authorize]
+    [Route("api/users/{userId}/photos")]
     [ApiController]
     public class PhotosController : ControllerBase
     {
@@ -55,7 +54,8 @@ namespace DatingApp.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> addPhotoForUser(int userId, PhotoForCreationDto photoForCreationDto)
+        public async Task<IActionResult> addPhotoForUser(int userId,
+            [FromForm]PhotoForCreationDto photoForCreationDto)
         {
             if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
                 return Unauthorized();

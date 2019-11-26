@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/PhotosController.cs">
     <Files>
       <File FileName="Data/AuthRepository.cs" Line="8" Column="50" />
-      <File FileName="Startup.cs" Line="44" Column="57" />
-      <File FileName="Controllers/PhotosController.cs" Line="46" Column="46" />
+      <File FileName="Startup.cs" />
+      <File FileName="Controllers/PhotosController.cs" Line="67" Column="56" />
+      <File FileName="Data/DatingRepository.cs" Line="39" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,11 +15,12 @@
                 <Node name="PhotosController.cs" selected="True" />
               </Node>
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
