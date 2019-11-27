@@ -3,12 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using DatingApp.API.Data;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace DatingApp.API.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
@@ -19,6 +20,14 @@ namespace DatingApp.API.Controllers
         {
             this._context = context;
 
+        }
+
+        [HttpGet("my-values")]
+        public ActionResult GetTestObject()
+        {
+            var person = new Person() { Name = "Mattias Hensdal", Age = 46};
+
+            return Ok(person);
         }
 
         public async Task<IActionResult> GetVales() 
@@ -72,5 +81,11 @@ namespace DatingApp.API.Controllers
         public void Delete(int id)
         {
         }
+    }
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
     }
 }
