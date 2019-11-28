@@ -24,6 +24,8 @@
       <e p="DatingApp.API.csproj" t="IncludeRecursive" />
       <e p="DatingApp.API.sln" t="IncludeFlat" />
       <e p="datingapp.db" t="Include" />
+      <e p="datingapp.db-shm" t="Include" />
+      <e p="datingapp.db-wal" t="Include" />
       <e p="Dtos" t="Include">
         <e p="PhotoForCreationDto.cs" t="Include" />
         <e p="PhotoForReturnDto.cs" t="Include" />
